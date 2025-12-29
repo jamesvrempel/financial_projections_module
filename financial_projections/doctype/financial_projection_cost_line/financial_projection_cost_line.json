@@ -1,0 +1,70 @@
+{
+ "actions": [],
+ "creation": "2024-12-29 10:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "cost_type",
+  "description",
+  "calculation_type",
+  "column_break_2",
+  "cost_per_unit",
+  "cost_percentage",
+  "related_revenue_type"
+ ],
+ "fields": [
+  {
+   "fieldname": "cost_type",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Cost Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "default": "Per Instance",
+   "fieldname": "calculation_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Calculation Type",
+   "options": "Per Instance\nFixed Monthly\nPercentage of Revenue"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cost_per_unit",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Cost per Unit/Month"
+  },
+  {
+   "fieldname": "cost_percentage",
+   "fieldtype": "Percent",
+   "label": "Cost Percentage"
+  },
+  {
+   "description": "Link to revenue type for instance count or percentage calculation",
+   "fieldname": "related_revenue_type",
+   "fieldtype": "Data",
+   "label": "Related Revenue Type"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-12-29 10:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Financial Projections",
+ "name": "Financial Projection Cost Line",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

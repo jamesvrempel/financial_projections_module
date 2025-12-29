@@ -1,0 +1,82 @@
+{
+ "actions": [],
+ "creation": "2024-12-29 10:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "revenue_type",
+  "description",
+  "calculation_type",
+  "column_break_2",
+  "price_per_unit",
+  "monthly_new_sales",
+  "annual_price_increase",
+  "implementation_months"
+ ],
+ "fields": [
+  {
+   "fieldname": "revenue_type",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Revenue Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "default": "Recurring",
+   "fieldname": "calculation_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Calculation Type",
+   "options": "Recurring\nOne-Time"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "price_per_unit",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Price per Unit/Month",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "description": "Number of new sales/instances per month",
+   "fieldname": "monthly_new_sales",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Monthly New Sales"
+  },
+  {
+   "default": "0",
+   "description": "Annual price increase percentage",
+   "fieldname": "annual_price_increase",
+   "fieldtype": "Percent",
+   "label": "Annual Price Increase %"
+  },
+  {
+   "description": "For one-time revenue, spread over this many months",
+   "fieldname": "implementation_months",
+   "fieldtype": "Int",
+   "label": "Implementation Months"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-12-29 10:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Financial Projections",
+ "name": "Financial Projection Revenue Line",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

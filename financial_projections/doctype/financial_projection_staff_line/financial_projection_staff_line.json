@@ -1,0 +1,80 @@
+{
+ "actions": [],
+ "creation": "2024-12-29 10:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "position_title",
+  "department",
+  "start_month",
+  "column_break_2",
+  "monthly_salary",
+  "monthly_benefits",
+  "vehicle_allowance",
+  "annual_increase"
+ ],
+ "fields": [
+  {
+   "fieldname": "position_title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Position Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Data",
+   "label": "Department"
+  },
+  {
+   "default": "1",
+   "description": "Month when position starts (1-36)",
+   "fieldname": "start_month",
+   "fieldtype": "Int",
+   "label": "Start Month"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "monthly_salary",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Monthly Salary",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "monthly_benefits",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Monthly Benefits"
+  },
+  {
+   "default": "0",
+   "fieldname": "vehicle_allowance",
+   "fieldtype": "Currency",
+   "label": "Vehicle Allowance"
+  },
+  {
+   "default": "0",
+   "description": "Annual salary increase percentage",
+   "fieldname": "annual_increase",
+   "fieldtype": "Percent",
+   "label": "Annual Increase %"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-12-29 10:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Financial Projections",
+ "name": "Financial Projection Staff Line",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

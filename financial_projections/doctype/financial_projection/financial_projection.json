@@ -1,0 +1,319 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:projection_name",
+ "creation": "2024-12-29 10:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_1",
+  "projection_name",
+  "company",
+  "fiscal_year",
+  "column_break_2",
+  "start_date",
+  "projection_years",
+  "status",
+  "section_break_assumptions",
+  "cash_on_hand_start",
+  "cash_balance_alert",
+  "column_break_8",
+  "cash_receipt_delay",
+  "cost_of_revenue_delay",
+  "opex_delay",
+  "capex_delay",
+  "section_break_revenue",
+  "revenue_assumptions",
+  "section_break_costs",
+  "cost_assumptions",
+  "section_break_staff",
+  "staff_assumptions",
+  "section_break_capex",
+  "capex_assumptions",
+  "section_break_projections",
+  "monthly_projections",
+  "section_break_summary",
+  "total_revenue_y1",
+  "total_revenue_y2",
+  "total_revenue_y3",
+  "column_break_summary",
+  "total_gross_profit_y1",
+  "total_gross_profit_y2",
+  "total_gross_profit_y3",
+  "column_break_summary2",
+  "total_net_income_y1",
+  "total_net_income_y2",
+  "total_net_income_y3"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_1",
+   "fieldtype": "Section Break",
+   "label": "Basic Information"
+  },
+  {
+   "fieldname": "projection_name",
+   "fieldtype": "Data",
+   "label": "Projection Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "fiscal_year",
+   "fieldtype": "Link",
+   "label": "Fiscal Year",
+   "options": "Fiscal Year"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date",
+   "reqd": 1
+  },
+  {
+   "default": "3",
+   "fieldname": "projection_years",
+   "fieldtype": "Int",
+   "label": "Projection Years",
+   "reqd": 1
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nActive\nArchived"
+  },
+  {
+   "fieldname": "section_break_assumptions",
+   "fieldtype": "Section Break",
+   "label": "Cash Flow Assumptions"
+  },
+  {
+   "default": "10000",
+   "fieldname": "cash_on_hand_start",
+   "fieldtype": "Currency",
+   "label": "Cash on Hand (Start)"
+  },
+  {
+   "default": "0",
+   "fieldname": "cash_balance_alert",
+   "fieldtype": "Currency",
+   "label": "Cash Balance Alert Threshold"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "description": "Number of months delay in receiving cash from sales",
+   "fieldname": "cash_receipt_delay",
+   "fieldtype": "Int",
+   "label": "Cash Receipt Delay (Months)"
+  },
+  {
+   "default": "0",
+   "description": "Number of months delay in paying cost of revenue",
+   "fieldname": "cost_of_revenue_delay",
+   "fieldtype": "Int",
+   "label": "Cost of Revenue Delay (Months)"
+  },
+  {
+   "default": "0",
+   "description": "Number of months delay in paying operating expenses (0-6)",
+   "fieldname": "opex_delay",
+   "fieldtype": "Int",
+   "label": "OPEX Delay (Months)"
+  },
+  {
+   "default": "0",
+   "description": "Number of months delay in paying capital expenditures (0-6)",
+   "fieldname": "capex_delay",
+   "fieldtype": "Int",
+   "label": "CAPEX Delay (Months)"
+  },
+  {
+   "fieldname": "section_break_revenue",
+   "fieldtype": "Section Break",
+   "label": "Revenue Assumptions"
+  },
+  {
+   "fieldname": "revenue_assumptions",
+   "fieldtype": "Table",
+   "label": "Revenue Lines",
+   "options": "Financial Projection Revenue Line"
+  },
+  {
+   "fieldname": "section_break_costs",
+   "fieldtype": "Section Break",
+   "label": "Cost of Revenue Assumptions"
+  },
+  {
+   "fieldname": "cost_assumptions",
+   "fieldtype": "Table",
+   "label": "Cost Lines",
+   "options": "Financial Projection Cost Line"
+  },
+  {
+   "fieldname": "section_break_staff",
+   "fieldtype": "Section Break",
+   "label": "Staff Cost Assumptions"
+  },
+  {
+   "fieldname": "staff_assumptions",
+   "fieldtype": "Table",
+   "label": "Staff Positions",
+   "options": "Financial Projection Staff Line"
+  },
+  {
+   "fieldname": "section_break_capex",
+   "fieldtype": "Section Break",
+   "label": "CAPEX Assumptions"
+  },
+  {
+   "fieldname": "capex_assumptions",
+   "fieldtype": "Table",
+   "label": "Capital Expenditures",
+   "options": "Financial Projection CAPEX Line"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_projections",
+   "fieldtype": "Section Break",
+   "label": "Monthly Projections (Calculated)"
+  },
+  {
+   "fieldname": "monthly_projections",
+   "fieldtype": "Table",
+   "label": "Monthly Data",
+   "options": "Financial Projection Monthly Data",
+   "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_summary",
+   "fieldtype": "Section Break",
+   "label": "Summary (Calculated)"
+  },
+  {
+   "fieldname": "total_revenue_y1",
+   "fieldtype": "Currency",
+   "label": "Total Revenue Year 1",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_revenue_y2",
+   "fieldtype": "Currency",
+   "label": "Total Revenue Year 2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_revenue_y3",
+   "fieldtype": "Currency",
+   "label": "Total Revenue Year 3",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_summary",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_gross_profit_y1",
+   "fieldtype": "Currency",
+   "label": "Gross Profit Year 1",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_gross_profit_y2",
+   "fieldtype": "Currency",
+   "label": "Gross Profit Year 2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_gross_profit_y3",
+   "fieldtype": "Currency",
+   "label": "Gross Profit Year 3",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_summary2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_net_income_y1",
+   "fieldtype": "Currency",
+   "label": "Net Income Year 1",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_net_income_y2",
+   "fieldtype": "Currency",
+   "label": "Net Income Year 2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_net_income_y3",
+   "fieldtype": "Currency",
+   "label": "Net Income Year 3",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-12-29 10:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Financial Projections",
+ "name": "Financial Projection",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts User",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -1,0 +1,135 @@
+{
+  "doctype": "Financial Projection",
+  "projection_name": "Sample SaaS Startup - 3 Year Projection",
+  "start_date": "2025-03-01",
+  "projection_years": 3,
+  "status": "Draft",
+  "cash_on_hand_start": 10000,
+  "cash_balance_alert": 0,
+  "cash_receipt_delay": 0,
+  "cost_of_revenue_delay": 0,
+  "opex_delay": 0,
+  "capex_delay": 0,
+  "revenue_assumptions": [
+    {
+      "revenue_type": "IoT Licenses",
+      "description": "Monthly IoT device monitoring licenses",
+      "calculation_type": "Recurring",
+      "price_per_unit": 10.0,
+      "monthly_new_sales": 500,
+      "annual_price_increase": 0,
+      "implementation_months": 0
+    },
+    {
+      "revenue_type": "Other Apps",
+      "description": "Additional application hosting and services",
+      "calculation_type": "Recurring",
+      "price_per_unit": 5.0,
+      "monthly_new_sales": 1,
+      "annual_price_increase": 0,
+      "implementation_months": 0
+    },
+    {
+      "revenue_type": "ERP Licenses",
+      "description": "Enterprise ERP system licenses",
+      "calculation_type": "Recurring",
+      "price_per_unit": 50.0,
+      "monthly_new_sales": 1,
+      "annual_price_increase": 0,
+      "implementation_months": 0
+    }
+  ],
+  "cost_assumptions": [
+    {
+      "cost_type": "IoT Platform Cost",
+      "description": "Per-device IoT platform hosting and data storage",
+      "calculation_type": "Per Instance",
+      "cost_per_unit": 0.10,
+      "cost_percentage": 0,
+      "related_revenue_type": "IoT Licenses"
+    },
+    {
+      "cost_type": "Other Apps Hosting",
+      "description": "Cloud hosting for additional applications",
+      "calculation_type": "Per Instance",
+      "cost_per_unit": 0.02,
+      "cost_percentage": 0,
+      "related_revenue_type": "Other Apps"
+    },
+    {
+      "cost_type": "ERP Instance Cost",
+      "description": "ERP system hosting and maintenance per company",
+      "calculation_type": "Per Instance",
+      "cost_per_unit": 25.0,
+      "cost_percentage": 0,
+      "related_revenue_type": "ERP Licenses"
+    }
+  ],
+  "staff_assumptions": [
+    {
+      "position_title": "CEO / Founder",
+      "department": "Leadership",
+      "start_month": 2,
+      "monthly_salary": 5000.0,
+      "monthly_benefits": 0,
+      "vehicle_allowance": 0,
+      "annual_increase": 10.0
+    },
+    {
+      "position_title": "Lead Developer",
+      "department": "Engineering",
+      "start_month": 1,
+      "monthly_salary": 7000.0,
+      "monthly_benefits": 0,
+      "vehicle_allowance": 0,
+      "annual_increase": 10.0
+    },
+    {
+      "position_title": "Sales Manager",
+      "department": "Sales",
+      "start_month": 6,
+      "monthly_salary": 6000.0,
+      "monthly_benefits": 500,
+      "vehicle_allowance": 500,
+      "annual_increase": 8.0
+    }
+  ],
+  "capex_assumptions": [
+    {
+      "asset_name": "Development Laptop - Lead Dev",
+      "asset_category": "Office Equipment",
+      "purchase_month": 4,
+      "purchase_year": 1,
+      "cost": 2000.0,
+      "depreciation_years": 3,
+      "salvage_value": 200
+    },
+    {
+      "asset_name": "Development Laptop - CEO",
+      "asset_category": "Office Equipment",
+      "purchase_month": 12,
+      "purchase_year": 1,
+      "cost": 2000.0,
+      "depreciation_years": 3,
+      "salvage_value": 200
+    },
+    {
+      "asset_name": "Office Furniture",
+      "asset_category": "Furnishings",
+      "purchase_month": 1,
+      "purchase_year": 1,
+      "cost": 5000.0,
+      "depreciation_years": 5,
+      "salvage_value": 500
+    },
+    {
+      "asset_name": "Server Equipment",
+      "asset_category": "IT Infrastructure",
+      "purchase_month": 6,
+      "purchase_year": 2,
+      "cost": 15000.0,
+      "depreciation_years": 5,
+      "salvage_value": 1000
+    }
+  ]
+}
